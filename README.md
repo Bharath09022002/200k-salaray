@@ -1,6 +1,6 @@
-# Most Common Words Finder
+# Boston Top Earners
 
-This project analyzes a given text to identify the most frequently occurring words, ignoring punctuation and case sensitivity. The results are dynamically displayed on a web page.
+This project processes a dataset of individuals from Boston to identify and display the top earners based on their salaries. It is implemented using JavaScript and utilizes the HTML DOM for displaying the results dynamically.
 
 ## Demo
 
@@ -9,23 +9,22 @@ You can view a live demo of the project [here](#).
 
 ## Features
 
-- Removes punctuation and handles case sensitivity.
-- Counts the frequency of each word in the provided text.
-- Displays the most common words and their counts.
-- Dynamically updates the HTML content to present results.
+- Filters individuals with salaries greater than $200,000.
+- Displays the names and salaries of the top earners.
+- Sorts the top earners by salary in descending order.
+- Dynamically updates the HTML content to display results.
 
 ## How It Works
 
-1. **Input Text**: The text is defined as a string in the JavaScript code.
-2. **Text Processing**:
-   - Converts the text to uppercase and removes punctuation.
-   - Splits the processed text into an array of words.
-3. **Counting Frequencies**:
-   - Iterates through the array to count the occurrences of each word.
-   - Filters out words that occur more than once.
-4. **Sorting and Displaying**:
-   - Sorts the filtered words by frequency in descending order.
-   - Displays the top three most common words along with their counts on the page.
+1. The data is imported from a module called `boston.js`, which contains an array of individuals and their salary information.
+2. The script filters out individuals with salaries over $200,000 and stores their names and salaries in an array.
+3. The top earners are then sorted by salary, and the top 5 earners are selected for display.
+4. The results are dynamically injected into the HTML DOM for user visibility.
+
+### Main Concepts
+- **Filtering**: Iterates through the dataset and checks for salaries greater than $200,000.
+- **Sorting**: Sorts the filtered data in descending order based on salary.
+- **DOM Manipulation**: Updates the HTML content to display the names and salaries of the top earners.
 
 ## Installation
 
@@ -34,8 +33,12 @@ To run this project locally:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/most-common-words-finder.git
-   cd most-common-words-finder
+   git clone https://github.com/your-username/boston-top-earners.git
+   cd boston-top-earners
    open index.html
 ## Usage
-Once you open the project in your browser, the script will automatically analyze the text and display the most common words directly on the page.
+Once you open the project in your browser, the script will automatically filter and display the top earners directly on the page.
+
+Modifications:
+You can adjust the salary threshold by changing the value in the filtering condition within the script.
+Update the dataset in boston.js to include new individuals or modify existing data.
